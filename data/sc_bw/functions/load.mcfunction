@@ -32,4 +32,17 @@ scoreboard players set #IS_GAME_RUNNING sc_bw 0
 # To detect player deaths
 scoreboard objectives add gameDeathBw deathCount
 
+# To count time since player's death
+scoreboard objectives add sc_bw_death_timer dummy
+
+# To store player's Y positions
+scoreboard objectives add sc_bw_Y_pos dummy
+
+# Is not updated automatically. Is only needed as a placeholder variable for player respawn functionality
+scoreboard objectives add sc_bw_is_players_bed_present dummy
+
+# Is used to keep track of beds present. Is updated in a game cycle
+scoreboard objectives add sc_bw_bed_present dummy
+function sc_bw:helpers/_reset_bed_present
+
 tellraw @a [{"text": "SC Bedwars loaded"}]

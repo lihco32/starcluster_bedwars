@@ -1,0 +1,4 @@
+scoreboard players set #IS_GAME_RUNNING sc_bw 0
+#execute if score #IS_GAME_RUNNING sc_bw matches 1 run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text":"================","color":"#0033cc"}
+#execute if score #IS_GAME_RUNNING sc_bw matches 1 run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] [{"text":"Бедварс", "color":"#668cff"},{"text":" : "}, {"text":"Гра досі триває", "color":"white"}]
+#execute if score #IS_GAME_RUNNING sc_bw matches 1 run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text":"================","color":"#0033cc"} 

@@ -24,6 +24,9 @@ execute positioned ~139 ~42 ~22 run place template sc_bw:standart_2/flying_blue
 # center marker
 summon minecraft:marker ~82 ~17 ~27 {Tags:["sc_bw_map_marker", "sc_bw_map_center", "sc_bw_map_center_standart_2"]}
 
+#bottom marker - DEFINES HEIGHT AT WHICH PLAYERS DIE
+summon minecraft:marker ~82 ~ ~27 {Tags:["sc_bw_map_marker", "sc_bw_map_bottom"]}
+
 # markers for beds
 summon minecraft:marker ~10 ~17 ~27 {Tags:["sc_bw_map_marker", "sc_bw_red_bed"]}
 summon minecraft:marker ~154 ~17 ~27 {Tags:["sc_bw_map_marker", "sc_bw_blue_bed"]}

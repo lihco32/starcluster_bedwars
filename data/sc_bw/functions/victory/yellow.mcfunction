@@ -1,0 +1,1 @@
+scoreboard players set #IS_GAME_RUNNING sc_bw 0
