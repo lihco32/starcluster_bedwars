@@ -1,4 +1,5 @@
 scoreboard players set #IS_GAME_RUNNING sc_bw 1
+scoreboard players set #IS_START_TIMER_RUNNING sc_bw 0
 
 #give tags
 execute at @e[type=marker, tag=sc_bw_lobby_red_team] run tag @a[distance=..2.5, gamemode=!spectator] add sc_bw_player
@@ -30,6 +31,7 @@ scoreboard players set @a[tag=sc_bw_player] gameDeathBw 0
 execute at @e[type=marker, tag=sc_bw_lobby_center] as @a[distance=..30, gamemode=!spectator, tag=sc_bw_player] run clear @s
 effect clear @a[tag=sc_bw_player]
 effect give @a[tag=sc_bw_player] minecraft:saturation 5 10
+effect give @a[tag=sc_bw_player] instant_health 1 10
 gamemode adventure @a[tag=sc_bw_player] 
 
 #give items

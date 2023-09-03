@@ -8,3 +8,5 @@ tag @s remove sc_bw_purple
 tag @s remove sc_bw_pink
 tag @s remove sc_bw_black
 tag @s remove sc_bw_white
+
+tag @s add sc_bw_spectator
