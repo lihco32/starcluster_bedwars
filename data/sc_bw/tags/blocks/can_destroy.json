@@ -1,0 +1,12 @@
+{
+    "values": [
+        "#minecraft:wool",
+        "#minecraft:terracotta",
+        "#minecraft:beds",
+        "minecraft:end_stone",
+        "minecraft:water",
+        "minecraft:obsidian",
+        "minecraft:glass",
+        "minecraft:oak_planks"
+    ]
+}

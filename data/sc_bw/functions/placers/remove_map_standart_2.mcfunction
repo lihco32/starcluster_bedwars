@@ -1,3 +1,4 @@
+#remove map
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] at @s run fill ~-82 ~-19 ~-27 ~-67 ~11 ~28 minecraft:air
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] at @s run fill ~-67 ~-19 ~-27 ~-52 ~11 ~28 minecraft:air
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] at @s run fill ~-52 ~-19 ~-27 ~-37 ~11 ~28 minecraft:air
@@ -13,4 +14,5 @@ execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] at @s run fill ~-66 ~23 ~-4 ~-51 ~48 ~11 minecraft:air
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] at @s run fill ~58 ~23 ~-4 ~73 ~48 ~11 minecraft:air
 
+#kill markers
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..20] at @s run kill @e[type=marker,tag=sc_bw_map_marker,distance=..83]

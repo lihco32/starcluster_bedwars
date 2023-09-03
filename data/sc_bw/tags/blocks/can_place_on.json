@@ -1,0 +1,29 @@
+{
+    "values": [
+        "#minecraft:wool",
+        "#minecraft:terracotta",
+        "#minecraft:beds",
+        "#minecraft:planks",
+        "#minecraft:logs",
+        "#minecraft:leaves",
+        "minecraft:obsidian",
+        "#sc_bw:froglight",
+        "#sc_bw:ore",
+        "#sc_bw:glass",
+        "minecraft:deepslate_brick_slab",
+        "minecraft:smooth_stone_slab",
+        "minecraft:smooth_basalt",
+        "minecraft:polished_basalt",
+        "minecraft:water",
+        "minecraft:deepslate_tiles",
+        "minecraft:end_stone",
+        "minecraft:deepslate_bricks",
+        "minecraft:polished_deepslate_slab",
+        "minecraft:deepslate_tile_slab",
+        "minecraft:netherite_block",
+        "minecraft:cobbled_deepslate_slab",
+        "minecraft:sculk",
+        "minecraft:mangrove_roots",
+        "minecraft:fern"
+    ]
+}

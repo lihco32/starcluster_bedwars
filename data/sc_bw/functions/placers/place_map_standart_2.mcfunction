@@ -28,6 +28,10 @@ summon minecraft:marker ~82 ~17 ~27 {Tags:["sc_bw_map_marker", "sc_bw_map_center
 summon minecraft:marker ~10 ~17 ~27 {Tags:["sc_bw_map_marker", "sc_bw_red_bed"]}
 summon minecraft:marker ~154 ~17 ~27 {Tags:["sc_bw_map_marker", "sc_bw_blue_bed"]}
 
+# markers for spawnpoints
+summon minecraft:marker ~4 ~16 ~27 {Tags:["sc_bw_map_marker", "sc_bw_red_spawnpoint"]}
+summon minecraft:marker ~160 ~16 ~27 {Tags:["sc_bw_map_marker", "sc_bw_blue_spawnpoint"]}
+
 # markers for generators
 summon minecraft:marker ~4 ~16 ~27 {Tags:["sc_bw_map_marker", "sc_bw_iron_generator"]}
 summon minecraft:marker ~160 ~16 ~27 {Tags:["sc_bw_map_marker", "sc_bw_iron_generator"]}
