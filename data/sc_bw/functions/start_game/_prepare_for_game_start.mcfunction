@@ -49,13 +49,13 @@ execute if score #TEAM_AMOUNT sc_bw matches 8 run scoreboard players set #BLACK 
 execute if score #TEAM_AMOUNT sc_bw matches 8 run scoreboard players set #WHITE sc_bw_bed_present 1
 
 #set map
-execute if score #SELECTED_MAP sc_bw matches 1 at @e[type=marker, tag=sc_bw_lobby_center] positioned ~ ~50 ~ run schedule function sc_bw:placers/place_map_standart_2 2t
+execute if score #SELECTED_MAP sc_bw matches 1 as @e[type=marker, tag=sc_bw_lobby_center] at @s positioned ~ ~50 ~ run schedule function sc_bw:placers/place_map_standart_2 2t
 
 #summon traders
 schedule function sc_bw:helpers/_summon_traders 4t
 
 #tp players and set spawnpoints
-execute at @e[type=marker, tag=sc_bw_lobby_center] run schedule function sc_bw:helpers/_initial_tp_players 7t
+execute as @e[type=marker, tag=sc_bw_lobby_center] at @s run schedule function sc_bw:helpers/_initial_tp_players 7t
 
 
 #start cycles

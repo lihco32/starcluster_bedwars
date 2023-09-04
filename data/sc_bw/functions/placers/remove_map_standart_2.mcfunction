@@ -14,5 +14,8 @@ execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] at @s run fill ~-66 ~23 ~-4 ~-51 ~48 ~11 minecraft:air
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] at @s run fill ~58 ~23 ~-4 ~73 ~48 ~11 minecraft:air
 
+#kill villagers
+execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..500] run kill @e[type=villager,tag=sc_bw_trader,distance=..500]
+
 #kill markers
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2, distance=..20] at @s run kill @e[type=marker,tag=sc_bw_map_marker,distance=..83]
