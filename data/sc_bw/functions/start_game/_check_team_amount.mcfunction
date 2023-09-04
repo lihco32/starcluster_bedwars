@@ -28,13 +28,10 @@ execute if score #START_PURPLE_TEAM_AMOUNT sc_bw matches 1.. run scoreboard play
 execute if score #START_BLACK_TEAM_AMOUNT sc_bw matches 1.. run scoreboard players add #AMOUNT_OF_TEAMS_READY sc_bw 1
 execute if score #START_WHITE_TEAM_AMOUNT sc_bw matches 1.. run scoreboard players add #AMOUNT_OF_TEAMS_READY sc_bw 1
 
-#if 0 - required and found amount of players match
-scoreboard players operation #AMOUNT_OF_TEAMS_READY sc_bw -= #TEAM_AMOUNT sc_bw
-
 # Message if not enough teams
-execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 0 run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text": "=================", "color":"white"}
-execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 0 run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] [{"text":"Бедварс", "color":"#668cff"},{"text":" : "}, {"text":"Кількість команд для обраної карти не співпадає з кількістю команд в лоббі", "color":"white"}]
-execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 0 run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text": "=================", "color":"white"}
+execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text": "=================", "color":"white"}
+execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] [{"text":"Бедварс", "color":"#668cff"},{"text":" : "}, {"text":"Кількість команд для обраної карти не співпадає з кількістю команд в лоббі", "color":"white"}]
+execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text": "=================", "color":"white"}
 
 
-execute if score #AMOUNT_OF_TEAMS_READY sc_bw matches 0 run function sc_bw:start_game/_prepare_for_game_start
+execute if score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run function sc_bw:start_game/_prepare_for_game_start

@@ -35,7 +35,8 @@ effect give @a[tag=sc_bw_player] instant_health 1 10
 gamemode adventure @a[tag=sc_bw_player] 
 
 #give items
-execute at @e[type=marker, tag=sc_bw_lobby_center] as @a[distance=..30, gamemode=!spectator, tag=sc_bw_player] run schedule function sc_bw:helpers/_give_items 3t
+execute at @e[type=marker, tag=sc_bw_lobby_center] as @a[distance=..30, gamemode=!spectator, tag=sc_bw_player] run tag @s add sc_bw_need_items
+schedule function sc_bw:helpers/_give_items 3t
 
 #reset values of beds present
 function sc_bw:helpers/_reset_bed_present
@@ -49,26 +50,26 @@ execute if score #TEAM_AMOUNT sc_bw matches 8 run scoreboard players set #BLACK 
 execute if score #TEAM_AMOUNT sc_bw matches 8 run scoreboard players set #WHITE sc_bw_bed_present 1
 
 #set map
-execute if score #SELECTED_MAP sc_bw matches 1 as @e[type=marker, tag=sc_bw_lobby_center] at @s positioned ~ ~50 ~ run schedule function sc_bw:placers/place_map_standart_2 2t
+execute if score #SELECTED_MAP sc_bw matches 1 run schedule function sc_bw:placers/place_map_standart_2 2t
 
 #summon traders
 schedule function sc_bw:helpers/_summon_traders 4t
 
 #tp players and set spawnpoints
-execute as @e[type=marker, tag=sc_bw_lobby_center] at @s run schedule function sc_bw:helpers/_initial_tp_players 7t
+schedule function sc_bw:helpers/_initial_tp_players 7t
 
 
 #start cycles
-schedule function sc_bw:game_cycle/_player_death_cycle 10t
-schedule function sc_bw:game_cycle/_control_spectators_cycle 10t
-schedule function sc_bw:game_cycle/_kill_players_fallen 10t
-schedule function sc_bw:game_cycle/_update_beds_status 10t
-schedule function sc_bw:game_cycle/_iron_gen_cycle 10t
-schedule function sc_bw:game_cycle/_gold_gen_cycle 10t
-schedule function sc_bw:game_cycle/_emerald_gen_cycle 10t
+schedule function sc_bw:game_cycle/_player_death_cycle 2s
+schedule function sc_bw:game_cycle/_control_spectators_cycle 2s
+schedule function sc_bw:game_cycle/_kill_players_fallen 2s
+schedule function sc_bw:game_cycle/_update_beds_status 2s
+schedule function sc_bw:game_cycle/_iron_gen_cycle 2s
+schedule function sc_bw:game_cycle/_gold_gen_cycle 2s
+schedule function sc_bw:game_cycle/_emerald_gen_cycle 2s
 
-execute if score #TEAM_AMOUNT sc_bw matches 2 run schedule function sc_bw:game_cycle/_check_game_end_2_teams 10t
-execute if score #TEAM_AMOUNT sc_bw matches 4 run schedule function sc_bw:game_cycle/_check_game_end_4_teams 10t
-execute if score #TEAM_AMOUNT sc_bw matches 8 run schedule function sc_bw:game_cycle/_check_game_end_8_teams 10t
+execute if score #TEAM_AMOUNT sc_bw matches 2 run schedule function sc_bw:game_cycle/_check_game_end_2_teams 3s
+execute if score #TEAM_AMOUNT sc_bw matches 4 run schedule function sc_bw:game_cycle/_check_game_end_4_teams 3s
+execute if score #TEAM_AMOUNT sc_bw matches 8 run schedule function sc_bw:game_cycle/_check_game_end_8_teams 3s
 
 
