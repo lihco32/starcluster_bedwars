@@ -7,7 +7,7 @@ execute as @e[type=marker, tag=sc_bw_blue_bed, limit=1] at @s unless block ~ ~ ~
 execute unless score #TEMPURA sc_bw = #BLUE sc_bw_bed_present run execute at @e[type=marker,tag=sc_bw_map_center] run title @a[distance=..300] title {"text":"Синє ліжко знищено", "color":"blue"}
 
 execute store result score #TEMPURA sc_bw run scoreboard players get #GREEN sc_bw_bed_present
-execute as @e[type=marker, tag=sc_bw_green_bed, limit=1] at @s unless block ~ ~ ~ green_bed run scoreboard players set #GREEN sc_bw_bed_present 0
+execute as @e[type=marker, tag=sc_bw_green_bed, limit=1] at @s unless block ~ ~ ~ lime_bed run scoreboard players set #GREEN sc_bw_bed_present 0
 execute unless score #TEMPURA sc_bw = #GREEN sc_bw_bed_present run execute at @e[type=marker,tag=sc_bw_map_center] run title @a[distance=..300] title {"text":"Зелене ліжко знищено", "color":"#30c62d"}
 
 execute store result score #TEMPURA sc_bw run scoreboard players get #YELLOW sc_bw_bed_present
