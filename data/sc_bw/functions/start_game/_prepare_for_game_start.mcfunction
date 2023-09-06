@@ -51,6 +51,7 @@ execute if score #TEAM_AMOUNT sc_bw matches 8 run scoreboard players set #WHITE 
 
 #set map
 execute if score #SELECTED_MAP sc_bw matches 1 run schedule function sc_bw:placers/place_map_standart_2 2t
+execute if score #SELECTED_MAP sc_bw matches 2 run schedule function sc_bw:placers/place_map_standart_4 2t
 
 #summon traders
 schedule function sc_bw:helpers/_summon_traders 4t
