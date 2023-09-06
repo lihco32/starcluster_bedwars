@@ -21,7 +21,7 @@ execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] run kill @e[type=villager,tag=sc_bw_trader,distance=..100]
 
 #kill items
-execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] run kill @e[type=minecraft:item,nbt={Item:{tag:{Tags:["sc_bw_item"]}}},distance=..100]
+execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] run kill @e[type=minecraft:item,distance=..100]
 
 #kill markers
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] at @s run kill @e[type=marker,tag=sc_bw_map_marker,distance=..100]

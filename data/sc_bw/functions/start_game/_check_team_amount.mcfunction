@@ -30,7 +30,7 @@ execute if score #START_WHITE_TEAM_AMOUNT sc_bw matches 1.. run scoreboard playe
 
 # Message if not enough teams
 execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text": "=================", "color":"white"}
-execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] [{"text":"Бедварс", "color":"#668cff"},{"text":" : "}, {"text":"Кількість команд для обраної карти не співпадає з кількістю команд в лоббі", "color":"white"}]
+execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] [{"text":"Бедварс", "color":"#668cff"},{"text":" : "}, {"text":"Недостатньо команд", "color":"white"}]
 execute unless score #AMOUNT_OF_TEAMS_READY sc_bw matches 2.. run execute at @e[type=marker, tag=sc_bw_lobby_center] run tellraw @a[distance=..30] {"text": "=================", "color":"white"}
 
 

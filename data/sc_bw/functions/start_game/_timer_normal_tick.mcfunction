@@ -1,7 +1,7 @@
 # Show time
 execute at @e[type=marker, tag=sc_bw_lobby_center] run title @a[distance=..30] subtitle {"text": "Увага, усі речі учасників буде знищено", "color":"dark_red"}
 execute at @e[type=marker, tag=sc_bw_lobby_center] run title @a[distance=..30] title {"score": {"name":"#START_TIMER_COUNT", "objective":"sc_bw"}, "color":"white"}
-execute at @e[type=marker, tag=sc_bw_lobby_center] as @a[distance=..30] run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 1 0.5 1
+execute at @e[type=marker, tag=sc_bw_lobby_center] as @a[distance=..30] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 1 0.5 1
 
 # Reduce time variable
 scoreboard players remove #START_TIMER_COUNT sc_bw 1

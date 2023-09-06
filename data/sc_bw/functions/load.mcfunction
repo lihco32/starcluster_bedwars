@@ -45,4 +45,4 @@ scoreboard objectives add sc_bw_is_players_bed_present dummy
 scoreboard objectives add sc_bw_bed_present dummy
 function sc_bw:helpers/_reset_bed_present
 
-tellraw @a [{"text": "SC Bedwars loaded"}]
+tellraw @a [{"text": "SC Bedwars loaded by LiHCO3, rtkkv, Blackays"}]

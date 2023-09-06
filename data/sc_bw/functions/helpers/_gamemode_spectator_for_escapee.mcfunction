@@ -1,0 +1,1 @@
+gamemode spectator @a[tag=sc_bw_spectator_escape] 
