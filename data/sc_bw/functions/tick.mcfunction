@@ -1,1 +1,1 @@
-execute as @e[type=marker] at @s run particle end_rod ~ ~ ~ 0.01 0.01 0.01 0.01 2 force
+#execute as @e[type=marker] at @s run particle end_rod ~ ~ ~ 0.01 0.01 0.01 0.01 2 force

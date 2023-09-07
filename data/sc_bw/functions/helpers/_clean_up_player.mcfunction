@@ -28,4 +28,7 @@ tag @a[tag=sc_bw_to_clean_up] remove sc_bw_change_to_spectator
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_need_tp
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_need_items
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_need_spawnpoint
+tag @a[tag=sc_bw_to_clean_up] remove sc_bw_remove_from_alive_list
+tag @a[tag=sc_bw_to_clean_up] remove sc_bw_handle_new_dead_player
+scoreboard players set @a[tag=sc_bw_to_clean_up] sc_bw_has_left_alive_list 0
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_to_clean_up

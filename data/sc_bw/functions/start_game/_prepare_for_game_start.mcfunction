@@ -28,11 +28,12 @@ execute at @e[type=marker, tag=sc_bw_lobby_white_team] run tag @a[distance=..2.5
 
 #reset players
 scoreboard players set @a[tag=sc_bw_player] gameDeathBw 0
+scoreboard players set @a[tag=sc_bw_player] sc_bw_has_left_alive_list 0
 execute at @e[type=marker, tag=sc_bw_lobby_center] as @a[distance=..30, gamemode=!spectator, tag=sc_bw_player] run clear @s
 effect clear @a[tag=sc_bw_player]
 effect give @a[tag=sc_bw_player] minecraft:saturation 5 10
 effect give @a[tag=sc_bw_player] instant_health 1 10
-gamemode adventure @a[tag=sc_bw_player] 
+gamemode adventure @a[tag=sc_bw_player]
 
 #give items
 execute at @e[type=marker, tag=sc_bw_lobby_center] as @a[distance=..30, gamemode=!spectator, tag=sc_bw_player] run tag @s add sc_bw_need_items
@@ -61,6 +62,8 @@ schedule function sc_bw:helpers/_summon_traders 2s
 #tp players and set spawnpoints
 schedule function sc_bw:helpers/_initial_tp_players 42t
 
+#Initialize variables like #RED_STILL_IN_GAME sc_bw
+schedule function sc_bw:helpers/_init_player_counting 45t
 
 #start cycles
 schedule function sc_bw:game_cycle/_player_death_cycle 3s

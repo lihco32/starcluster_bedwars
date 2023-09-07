@@ -45,4 +45,16 @@ scoreboard objectives add sc_bw_is_players_bed_present dummy
 scoreboard objectives add sc_bw_bed_present dummy
 function sc_bw:helpers/_reset_bed_present
 
+
+
+# #RED_STILL_IN_GAME sc_bw - amount of players still alive AND respawnable for the red team
+#   is set at the start of the game and updated automatically
+#   is used for detecting game end
+
+
+# bool value. Is set to 0 for every player at the start of the game. Defines whether the player has
+# already decremented a list of players_in_game. Is meant to prevent double-decrements
+scoreboard objectives add sc_bw_has_left_alive_list dummy
+
+
 tellraw @a [{"text": "SC Bedwars loaded by LiHCO3, rtkkv, Blackays"}]
