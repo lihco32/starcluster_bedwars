@@ -13,5 +13,4 @@ execute as @a[tag=sc_bw_change_to_spectator] run tag @s remove sc_bw_white
 
 execute as @a[tag=sc_bw_change_to_spectator] run tag @s add sc_bw_spectator
 
-execute as @a[tag=sc_bw_change_to_spectator] run gamemode spectator @s
 tag @a[tag=sc_bw_change_to_spectator] remove sc_bw_change_to_spectator

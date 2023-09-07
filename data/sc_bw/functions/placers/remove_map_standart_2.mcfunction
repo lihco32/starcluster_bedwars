@@ -20,5 +20,8 @@ execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_2
 #remove items
 schedule function sc_bw:helpers/_kill_items 5t
 
+# remove glass dome
+execute as @e[type=marker, tag=sc_bw_map_glass_dome] at @s run fill ~-20 ~-2 ~-20 ~20 ~8 ~20 minecraft:air
+
 #remove markers
 schedule function sc_bw:placers/_remove_markers 7t

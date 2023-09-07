@@ -55,3 +55,7 @@ execute as @e[type=marker, tag=sc_bw_lobby_center] at @s positioned ~ ~150 ~ run
 
 execute as @e[type=marker, tag=sc_bw_lobby_center] at @s positioned ~ ~150 ~ run summon minecraft:marker ~10 ~16 ~19 {Tags:["sc_bw_map_marker", "sc_bw_red_left_trader"]}
 execute as @e[type=marker, tag=sc_bw_lobby_center] at @s positioned ~ ~150 ~ run summon minecraft:marker ~10 ~16 ~33 {Tags:["sc_bw_map_marker", "sc_bw_red_right_trader"]}
+
+# glass dome
+execute as @e[type=marker, tag=sc_bw_map_center] at @s positioned ~ ~50 ~ run place template sc_bw:glass_dome ~-19 ~ ~-19
+execute as @e[type=marker, tag=sc_bw_map_center] at @s run summon minecraft:marker ~19 ~51 ~19 {Tags:["sc_bw_map_marker", "sc_bw_map_glass_dome"]}

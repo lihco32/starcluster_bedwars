@@ -24,10 +24,14 @@ execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=1}] run
 function sc_bw:helpers/_give_items
 execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=1}] run tag @s add sc_bw_need_tp
 function sc_bw:helpers/_tp_to_spawn
-execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=1}] run gamemode adventure @s
+execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=1}] run tag @s add sc_bw_need_spawnpoint
+function sc_bw:helpers/_spawnpoint_to_spawn
 execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=1}] run tag @s remove sc_bw_to_respawn
+execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=1}] run effect give @s instant_health 1 10
+execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=1}] run effect give @s saturation 1 5
 #   bed is absent
 execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=0}] run tag @s add sc_bw_change_to_spectator
+#execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=0}] run tp @s @e[type=marker,tag=sc_bw_map_glass_dome, limit=1]
 function sc_bw:helpers/_change_tags_to_spectator
 execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=0}] run tag @s remove sc_bw_to_respawn
 # end respawn players with enough time=================================================================
@@ -35,9 +39,10 @@ execute as @a[tag=sc_bw_to_respawn, scores={sc_bw_is_players_bed_present=0}] run
 
 # handle new dead player
 execute as @a[tag=sc_bw_player,scores={gameDeathBw=1..}] run scoreboard players set @s sc_bw_death_timer 0
-execute as @a[tag=sc_bw_player,scores={gameDeathBw=1..}] run gamemode spectator @s
 execute as @a[tag=sc_bw_player,scores={gameDeathBw=1..}] run tag @s add sc_bw_dead
 execute as @a[tag=sc_bw_player,scores={gameDeathBw=1..}] at @s run kill @e[type=minecraft:item,nbt={Item:{tag:{Tags:["sc_bw_item"]}}},distance=..1]
+execute as @a[tag=sc_bw_player,scores={gameDeathBw=1..}] run tp @s @e[type=marker,tag=sc_bw_map_glass_dome, limit=1]
+execute as @a[tag=sc_bw_player,scores={gameDeathBw=1..}] at @e[type=marker,tag=sc_bw_map_glass_dome, limit=1] run spawnpoint @s ~ ~ ~
 execute as @a[tag=sc_bw_player,scores={gameDeathBw=1..}] run scoreboard players set @s gameDeathBw 0
 
 

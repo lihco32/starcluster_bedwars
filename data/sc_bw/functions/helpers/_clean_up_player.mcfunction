@@ -27,5 +27,5 @@ tag @a[tag=sc_bw_to_clean_up] remove sc_bw_to_respawn
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_change_to_spectator
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_need_tp
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_need_items
-tag @a[tag=sc_bw_to_clean_up] remove sc_bw_spectator_escape
+tag @a[tag=sc_bw_to_clean_up] remove sc_bw_need_spawnpoint
 tag @a[tag=sc_bw_to_clean_up] remove sc_bw_to_clean_up

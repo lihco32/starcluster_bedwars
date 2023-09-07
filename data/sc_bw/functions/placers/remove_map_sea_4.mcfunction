@@ -11,5 +11,9 @@ schedule function sc_bw:placers/_sea_4/_remove_map_sea_4_part4 30t
 #remove items
 schedule function sc_bw:helpers/_kill_items 34t
 
+# remove glass dome
+execute as @e[type=marker, tag=sc_bw_map_glass_dome] at @s run fill ~-20 ~-2 ~-20 ~20 ~8 ~20 minecraft:air
+
+
 #remove markers
 schedule function sc_bw:placers/_remove_markers 36t

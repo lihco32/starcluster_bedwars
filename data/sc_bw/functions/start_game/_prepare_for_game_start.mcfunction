@@ -64,7 +64,6 @@ schedule function sc_bw:helpers/_initial_tp_players 42t
 
 #start cycles
 schedule function sc_bw:game_cycle/_player_death_cycle 3s
-schedule function sc_bw:game_cycle/_control_spectators_cycle 3s
 schedule function sc_bw:game_cycle/_kill_players_fallen 3s
 schedule function sc_bw:game_cycle/_update_beds_status 3s
 schedule function sc_bw:game_cycle/_iron_gen_cycle 8s
