@@ -18,10 +18,10 @@ execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4
 execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] at @s positioned ~-15 ~-20 ~-15 run fill ~-16 ~5 ~36 ~-7 ~23 ~47 minecraft:air
 
 #kill villagers
-execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] run kill @e[type=villager,tag=sc_bw_trader,distance=..100]
+execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] at @s run kill @e[type=villager,tag=sc_bw_trader,distance=..100]
 
-#kill items
-execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] run kill @e[type=minecraft:item,distance=..100]
+#remove items
+schedule function sc_bw:helpers/_kill_items 5t
 
-#kill markers
-execute as @e[type=marker, tag=sc_bw_map_center, tag=sc_bw_map_center_standart_4] at @s run kill @e[type=marker,tag=sc_bw_map_marker,distance=..100]
+#remove markers
+schedule function sc_bw:placers/_remove_markers 7t

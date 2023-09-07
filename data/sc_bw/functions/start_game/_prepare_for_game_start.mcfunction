@@ -52,25 +52,27 @@ execute if score #TEAM_AMOUNT sc_bw matches 8 run scoreboard players set #WHITE 
 #set map
 execute if score #SELECTED_MAP sc_bw matches 1 run schedule function sc_bw:placers/place_map_standart_2 2t
 execute if score #SELECTED_MAP sc_bw matches 2 run schedule function sc_bw:placers/place_map_standart_4 2t
+execute if score #SELECTED_MAP sc_bw matches 3 run schedule function sc_bw:placers/place_map_sea_2 2t
+execute if score #SELECTED_MAP sc_bw matches 4 run schedule function sc_bw:placers/place_map_sea_4 2t
 
 #summon traders
-schedule function sc_bw:helpers/_summon_traders 4t
+schedule function sc_bw:helpers/_summon_traders 2s
 
 #tp players and set spawnpoints
-schedule function sc_bw:helpers/_initial_tp_players 7t
+schedule function sc_bw:helpers/_initial_tp_players 42t
 
 
 #start cycles
-schedule function sc_bw:game_cycle/_player_death_cycle 2s
-schedule function sc_bw:game_cycle/_control_spectators_cycle 2s
-schedule function sc_bw:game_cycle/_kill_players_fallen 2s
-schedule function sc_bw:game_cycle/_update_beds_status 2s
-schedule function sc_bw:game_cycle/_iron_gen_cycle 2s
-schedule function sc_bw:game_cycle/_gold_gen_cycle 2s
-schedule function sc_bw:game_cycle/_emerald_gen_cycle 2s
+schedule function sc_bw:game_cycle/_player_death_cycle 3s
+schedule function sc_bw:game_cycle/_control_spectators_cycle 3s
+schedule function sc_bw:game_cycle/_kill_players_fallen 3s
+schedule function sc_bw:game_cycle/_update_beds_status 3s
+schedule function sc_bw:game_cycle/_iron_gen_cycle 8s
+schedule function sc_bw:game_cycle/_gold_gen_cycle 8s
+schedule function sc_bw:game_cycle/_emerald_gen_cycle 8s
 
-execute if score #TEAM_AMOUNT sc_bw matches 2 run schedule function sc_bw:game_cycle/_check_game_end_2_teams 3s
-execute if score #TEAM_AMOUNT sc_bw matches 4 run schedule function sc_bw:game_cycle/_check_game_end_4_teams 3s
-execute if score #TEAM_AMOUNT sc_bw matches 8 run schedule function sc_bw:game_cycle/_check_game_end_8_teams 3s
+execute if score #TEAM_AMOUNT sc_bw matches 2 run schedule function sc_bw:game_cycle/_check_game_end_2_teams 4s
+execute if score #TEAM_AMOUNT sc_bw matches 4 run schedule function sc_bw:game_cycle/_check_game_end_4_teams 4s
+execute if score #TEAM_AMOUNT sc_bw matches 8 run schedule function sc_bw:game_cycle/_check_game_end_8_teams 4s
 
 
