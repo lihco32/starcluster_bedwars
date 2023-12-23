@@ -4,8 +4,15 @@
         "#minecraft:terracotta",
         "#minecraft:beds",
         "#minecraft:planks",
+        "#minecraft:wooden_slabs",
+        "#minecraft:wooden_stairs",
+        "#minecraft:wooden_trapdoors",
         "#minecraft:logs",
         "#minecraft:leaves",
+        "#minecraft:concrete_powder",
+        "#minecraft:fences",
+        "#minecraft:fence_gates",
+        "#minecraft:all_signs",
         "minecraft:obsidian",
         "#sc_bw:froglight",
         "#sc_bw:ore",
@@ -24,6 +31,15 @@
         "minecraft:cobbled_deepslate_slab",
         "minecraft:sculk",
         "minecraft:mangrove_roots",
-        "minecraft:fern"
+        "minecraft:fern",
+        "minecraft:sandstone",
+        "minecraft:sandstone_wall",
+        "minecraft:sandstone_slab",
+        "minecraft:sandstone_stairs",
+        "minecraft:smooth_sandstone",
+        "minecraft:smooth_sandstone_stairs",
+        "minecraft:sand",
+        "minecraft:yellow_glazed_terracotta",
+        "minecraft:birch_sign"
     ]
 }
