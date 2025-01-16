@@ -2,7 +2,7 @@
 
 execute as @a[tag=sc_bw_handle_new_dead_player] run scoreboard players set @s sc_bw_death_timer 0
 execute as @a[tag=sc_bw_handle_new_dead_player] run tag @s add sc_bw_dead
-execute as @a[tag=sc_bw_handle_new_dead_player] at @s run kill @e[type=minecraft:item,distance=..1]
+execute as @a[tag=sc_bw_handle_new_dead_player] at @s run kill @e[type=item,distance=..2]
 execute as @a[tag=sc_bw_handle_new_dead_player] run scoreboard players set @s gameDeathBw 0
 
 execute as @a[tag=sc_bw_handle_new_dead_player] run tp @s @e[type=marker,tag=sc_bw_map_glass_dome, limit=1]
